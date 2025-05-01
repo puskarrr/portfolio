@@ -1,0 +1,157 @@
+/* Base Styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-bg: #f9f9f9;
+    --dark-text: #2c3e50;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--dark-text);
+}
+
+/* Header & Navigation */
+header {
+    background: var(--primary-color);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    background: var(--secondary-color);
+}
+
+.profile-img {
+    border-radius: 50%;
+    border: 3px solid white;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* Main Content Sections */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.section-container {
+    background: white;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.section-title {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Skills & Certificates */
+.skills-list {
+    columns: 2;
+    gap: 2rem;
+}
+
+.skill-category {
+    break-inside: avoid;
+    margin-bottom: 2rem;
+}
+
+.certificate-item {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--light-bg);
+    border-left: 4px solid var(--secondary-color);
+}
+
+.certificate-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-list {
+        columns: 1;
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .profile-img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Typography */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; color: var(--secondary-color); }
+
+blockquote {
+    font-style: italic;
+    color: var(--accent-color);
+    border-left: 3px solid var(--accent-color);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
