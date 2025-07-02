@@ -1,0 +1,72 @@
+
+html, body {height: 100%; margin: 0; font-family: Arial, sans-serif;}
+/* Map now sits below header */
+#map {
+  position: absolute;
+  top: 48px;   /* equal/greater than header height */
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Heading */
+#titleBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #2c7fb8;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  z-index: 1100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#titleBar h1 {margin: 0; font-size: 20px; letter-spacing: 0.5px;}
+
+/* Shift Leaflet's default controls downward to clear header */
+.leaflet-top {
+  top: 60px !important;
+}
+
+/* Control Panel */
+#controls {
+  position: absolute;
+  top: 80px; /* below header */
+  right: 10px;
+  z-index: 1000;
+  background: rgba(255,255,255,0.95);
+  padding: 12px;
+  max-width: 280px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+#controls h3 {margin: 8px 0 4px;}
+#controls button {
+  display: block;
+  width: 100%;
+  margin-bottom: 6px;
+  padding: 6px;
+  border: none;
+  border-radius: 4px;
+  background: #2c7fb8;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+#controls button:hover {background: #1d5d8a;}
+
+#controls input[type=range] {
+  width: 100%;
+  margin: 6px 0 12px;
+}
+
+#measurement, #info {
+  font-size: 12px;
+  margin-top: 6px;
+  line-height: 1.4em;
+  max-height: 180px;
+  overflow: auto;
+}
+table {width: 100%; border-collapse: collapse;}
+td {border-bottom: 1px solid #ddd; padding: 2px 4px;}

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Geospatial Tools - Nepal GIS Web App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Leaflet & plugins CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css" />
+    <link rel="stylesheet" href="tool.css" />
+</head>
+<body>
+    <!-- Heading Section -->
+    <header id="titleBar">
+        <h1>Geospatial Tools</h1>
+    </header>
+
+    <!-- Map container -->
+    <div id="map"></div>
+
+    <!-- Control panel -->
+    <div id="controls">
+        <h3>Spatial Tools</h3>
+
+        <label for="bufferRange">Buffer distance: <span id="bufferVal">1</span> km</label>
+        <input type="range" id="bufferRange" min="1" max="50" value="1" step="1" />
+
+        <button id="bufferBtn">Create Buffer</button>
+        <button id="centroidBtn">Centroid</button>
+        <button id="unionBtn">Union</button>
+
+        <h3>Measure</h3>
+        <p>Draw a line for length or a polygon for area.</p>
+        <div id="measurement"></div>
+
+        <h3>Query Layers</h3>
+        <button id="districtQueryBtn">District Info</button>
+        <button id="municipalityQueryBtn">Municipal Info</button>
+        <button id="wardQueryBtn">Ward Info</button>
+        <div id="info"></div>
+    </div>
+
+    <!-- Leaflet & plugins JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js"></script>
+    <script src="tool.js"></script>
+</body>
+</html>
